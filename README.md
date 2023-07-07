@@ -28,4 +28,10 @@ You may also see any lint errors in the console.
 
 
 On localhost, you might need to run the server which you can find in /server 
+
+`
+cd /server
+npm install
+npm start
+`
 This is primarily to proxy the bitfinex api endpoint because of CORS issues on localhost client. If you do this, then set the REACT_APP_BITFINEX_API_URL to http://localhost:17800/bitfinex-api in an .env file (just rename .env.sample to .env)
