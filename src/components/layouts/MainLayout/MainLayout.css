@@ -1,0 +1,16 @@
+.layout {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.layout_content {
+  padding: 5rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.layout_breadcrumbs {
+  margin-bottom: 3rem;
+}
+

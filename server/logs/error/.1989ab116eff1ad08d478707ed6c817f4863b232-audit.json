@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/error/.1989ab116eff1ad08d478707ed6c817f4863b232-audit.json",
+    "files": [
+        {
+            "date": 1688561553573,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/error/2023-07-05.log",
+            "hash": "ed0250ae97b9ddaf0fd245b42b3aa6827cac2129c246423fba1d79746487ee72"
+        }
+    ],
+    "hashType": "sha256"
+}

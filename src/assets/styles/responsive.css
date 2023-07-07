@@ -1,0 +1,32 @@
+ /* 
+ breakpoints: (
+ 'phone': 768px,
+ 'tablet': 1024px,
+ 'desktop': 1920px,
+} */
+
+html {
+    font-size: calc(100vw / 1440 * 10);
+  }
+
+/* tablet */
+@media (max-width: 1024px) {
+    html {
+        font-size: calc(100vw / 1023 * 10);
+    }
+}
+
+/* mobile */
+@media (max-width: 650px) {
+    html {
+        font-size: calc(100vw / 650 * 10);
+    }
+}
+
+/* sm  mobile */
+@media (max-width: 485px) {
+    html {
+
+        font-size: calc(100vw / 485 * 10);
+    }
+}

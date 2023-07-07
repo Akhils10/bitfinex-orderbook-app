@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/.335fcdff87ed9a79bfdb044c81fa118b0dbaa4ba-audit.json",
+    "files": [
+        {
+            "date": 1688561553571,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/2023-07-05.log",
+            "hash": "756c9f42fcad0e19eba304dec5c91664ab7d77acf3a4d4d858a67c52c21b3df6"
+        },
+        {
+            "date": 1688604148175,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/2023-07-06.log",
+            "hash": "f60c0e401fd5f0e1a1671dbd27ef2de2c2b00149e4983ca4b6d8dc08ff79733a"
+        },
+        {
+            "date": 1688711558613,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/2023-07-07.log",
+            "hash": "25a12b6055bb7996d0317e5d073d2369b7d86a4ae5e0734636a3d6d00caa8131"
+        }
+    ],
+    "hashType": "sha256"
+}

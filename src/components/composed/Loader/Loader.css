@@ -1,0 +1,11 @@
+.Loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.Loader_container svg {
+  width: 4em;
+  height: 4em;
+}

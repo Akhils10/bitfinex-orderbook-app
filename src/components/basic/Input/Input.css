@@ -1,0 +1,66 @@
+.input {
+	width: 100%;
+	row-gap: 0.7rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.input_label {
+	font-size: 1.6rem;
+	line-height: 152.2%;
+	color: var(--col-grey-100);
+	font-weight: 500;
+}
+
+.input_wrapper {
+	position: relative;
+	width: 100%;
+	column-gap: 1rem;
+	background-color: transparent;
+	border-radius: 9.04453px;
+	transition: all 0.1s ease-in;
+
+	display: flex;
+  flex-flow: nowrap;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.input_wrapper:focus-within {
+  transition: all 0.3s linear;
+}
+
+.input_icon {
+	position: relative;
+	bottom: 0.3rem;
+	width: 1.7rem;
+	height: 1.7rem;
+	flex-shrink: 0;
+}
+
+.input_field {
+	all: unset;
+	flex-grow: 1;
+	height: 100%;
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+	color: var(--col-text-secondary);
+	width: 100%;
+}
+
+.input_field::placeholder {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: var(--col-text-secondary);
+}
+
+.icon {
+	position: relative;
+	width: 1.6rem;
+	height: 1.6rem;
+	cursor: pointer;
+	border: none !important;
+	padding: none !important;
+}

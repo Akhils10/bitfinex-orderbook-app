@@ -1,0 +1,26 @@
+.price_card {
+    background-color: #171713;
+    padding: 2rem;
+    width: 30%;
+}
+
+.price_card .text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_card .text h3 {
+    font-size: 1.6rem;
+}
+
+.price_card p {
+    font-size: 1.6rem;
+}
+
+.price_card .text[data-type="gain"] p {
+    color: #0dbd0d;
+}
+
+.price_card .text[data-type="loss"] p {
+    color: #b22222;
+}
