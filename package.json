@@ -36,8 +36,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build:staging": "env-cmd -f ./.env.staging react-app-rewired build",
-    "build": "env-cmd -f ./.env.production react-app-rewired build && sh packing.sh",
+    "build": "react-app-rewired build",
     "test": "NODE_ENV=test react-scripts --openssl-legacy-provider test a --testPathIgnorePatterns='src/pages'",
     "coverage": "npm test -- --coverage ",
     "serve": "http-server -p 8000 build/ ",
