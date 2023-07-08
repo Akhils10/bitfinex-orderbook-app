@@ -1,4 +1,4 @@
-import { NumberHelpers } from '@Utils'
+import { Currency, NumberHelpers } from '@Utils'
 
 export default function Ticker({ ticker, clickHandler }) {
     return (
@@ -20,7 +20,7 @@ export default function Ticker({ ticker, clickHandler }) {
             </div>
             <div className="cell">
                 <div className="text">
-                    <p>{NumberHelpers.formatCryptoNum(ticker.volume, true, 3)}</p>
+                    <p>{Currency.getVolumeInUsd(ticker.lastPrice, ticker.volume)}</p>
                 </div>
             </div>
             <div className="cell">

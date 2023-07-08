@@ -16,7 +16,7 @@ export const getCurrencyFromSymbol = (symbol) => {
             if (_curr) return _curr[0]
             return _temp
         } else if (hasCurrency) return symbol.match(regex)[0]
-        return (symbol.length === 7) ? symbol.slice(4, 7) : symbol
+        return (symbol.length === 7) ? symbol.slice(4, 7) : symbol.includes(':') ? symbol.split(':')[1] : ''
     } catch (error) {
         return ''
     }

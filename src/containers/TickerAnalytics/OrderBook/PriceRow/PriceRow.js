@@ -2,10 +2,9 @@ import React from 'react'
 import { NumberHelpers } from '@Utils'
 import './PriceRow.css'
 
-
 function generateBackgroundImage(depth, type) {
-  if (type === 'bids') return `linear-gradient(to left, #4263ef ${depth}%, #171713 0%)`
-  return `linear-gradient(to right, #e56466 ${depth}%, #171713 0%)`
+  if (type === 'bids') return `linear-gradient(to left, #113534 ${depth}%, #171713 0%)`
+  return `linear-gradient(to right, #3d1e28 ${depth}%, #171713 0%)`
 }
 
 const PriceRow = ({

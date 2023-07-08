@@ -2,9 +2,11 @@ import { getCurrencyFromSymbol } from './Currency/getCurrencyFromSymbol'
 import { formatLargeNum } from './Number/formatLargeNumber'
 import { formatCryptoNum } from './Number/formatNumber'
 import { format } from './Number/formatNumber'
+import { getVolumeInUsd } from './Currency/parseAmount'
 
 const Currency = {
-  getCurrencyFromSymbol
+  getCurrencyFromSymbol,
+  getVolumeInUsd
 }
 
 const NumberHelpers = {

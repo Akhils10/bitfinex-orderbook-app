@@ -25,7 +25,7 @@ export default function PriceCard({ ticker }) {
                             </div>
                             <div className="text">
                                 <h3>Volume</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.volume, true, 3)}</p>
+                                <p>{Currency.getVolumeInUsd(ticker.lastPrice, ticker.volume)} {Currency.getCurrencyFromSymbol(ticker.symbol)}</p>
                             </div>
                             <div className="text">
                                 <h3>Low</h3>

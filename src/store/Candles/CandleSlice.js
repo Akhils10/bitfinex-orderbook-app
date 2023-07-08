@@ -18,6 +18,8 @@ export const candleSlice = createSlice({
             const index = candles.findIndex((candle) => candle.time === payload.time)
             if(index !== -1){
                 candles[index] = payload
+            }else{
+                candles.unshift(payload)
             }
             state.candles = candles
         },
