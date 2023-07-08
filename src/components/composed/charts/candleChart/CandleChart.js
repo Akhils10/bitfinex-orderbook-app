@@ -55,7 +55,7 @@ const CandleChart = ({
                     borderVisible: false,
                     secondsVisible: true,
                     tickMarkFormatter: (unixTime) => {
-                        return format(unixTime * 1000, 'MM/dd')
+                        return format(unixTime, 'yyyy/MM/dd')
                     },
                 },
                 watermark: {

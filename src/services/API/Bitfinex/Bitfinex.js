@@ -104,8 +104,10 @@ const getTickers = async () => {
 
 const getTrades = (symbol) => request(ENDPOINTS.GET_TRADES.replace('{symbol}', symbol))
 
+const candleDurations = ['1m', '5m', '15m', '30m', '1h', '3h', '6h', '12h', '1D', '1W', '14D', '1M']
+
 const getCandles = (duration = '1m', symbol, section = 'hist') => {
-  if (!['1m', '5m', '15m', '30m', '1h', '3h', '6h', '12h', '1D', '1W', '14D', '1M'].includes(duration)) throw new Error('Invalid duration')
+  if (!candleDurations.includes(duration)) throw new Error('Invalid duration')
   const candle = `candle:${duration}:${symbol}`
 
   return request(

@@ -19,6 +19,11 @@
             "date": 1688711558613,
             "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/2023-07-07.log",
             "hash": "25a12b6055bb7996d0317e5d073d2369b7d86a4ae5e0734636a3d6d00caa8131"
+        },
+        {
+            "date": 1688796728972,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/debug/2023-07-08.log",
+            "hash": "c35462f4eb60bb0b70ae1629a92c5082d72e88036bf45026a8b56f2abb633653"
         }
     ],
     "hashType": "sha256"

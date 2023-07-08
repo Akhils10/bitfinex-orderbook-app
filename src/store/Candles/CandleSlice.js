@@ -17,8 +17,7 @@ export const candleSlice = createSlice({
             const candles = state.candles
             const index = candles.findIndex((candle) => candle.time === payload.time)
             if(index !== -1){
-                candles.pop()
-                candles.push(payload)
+                candles[index] = payload
             }
             state.candles = candles
         },

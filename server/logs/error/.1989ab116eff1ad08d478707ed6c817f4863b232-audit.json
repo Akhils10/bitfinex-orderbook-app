@@ -14,6 +14,11 @@
             "date": 1688756054223,
             "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/error/2023-07-07.log",
             "hash": "29480bf0741735c5b471f6dabbc079c4356e95d39c59fc8b7473319103652919"
+        },
+        {
+            "date": 1688796728976,
+            "name": "/Users/newaccount/Documents/projects/mintLayer/react_test/server/logs/error/2023-07-08.log",
+            "hash": "46d63086b170ca380de4c5e9859bfa879124434661d8414ff46850ed76240a13"
         }
     ],
     "hashType": "sha256"
