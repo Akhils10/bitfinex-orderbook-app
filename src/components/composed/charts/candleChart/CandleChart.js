@@ -190,7 +190,7 @@ const CandleChart = ({
                         ${
                             volume ? `<p style="font-size: 10px; margin: 0; color: ${'#EBEBEA'}">
                             <span style="font-size: 10px; font-weight: 700; margin: 0 2rem 0 0; color: ${'#C1C0BE'}">Volume:</span>
-                            ${volume}
+                            ${volume?.toFixed(3)}
                             </p>` : ''
                         }
                         
