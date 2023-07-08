@@ -14,14 +14,12 @@ export const candleSlice = createSlice({
             state.candles = payload.reverse()
         },
         updateCandles: (state, { payload }) => {
-            const candles = state.candles
-            const index = candles.findIndex((candle) => candle.time === payload.time)
+            const index = state.candles.findIndex((candle) => candle.time === payload.time)
             if(index !== -1){
-                candles[index] = payload
+                state.candles[index] = payload
             }else{
-                candles.unshift(payload)
+                state.candles = [...state.candles, payload]
             }
-            state.candles = candles
         },
         setChannel: (state, { payload }) => {
             state.channel = payload

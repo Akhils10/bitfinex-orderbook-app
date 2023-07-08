@@ -37,10 +37,10 @@ export default function PriceCard({ ticker }) {
                             </div>
                             <div className="text" data-type={ticker.dailyChange > 0 ? 'gain' : 'loss'}>
                                 <h3>Daily change</h3>
-                                <p>{NumberHelpers.format(ticker.dailyChange, true, 3)} {ticker.dailyChange > 0 ? <FaCaretUp /> : <FaCaretDown />}</p>
+                                <p>{NumberHelpers.format(ticker.dailyChange, true, 3)} {Currency.getCurrencyFromSymbol(ticker.symbol)} {ticker.dailyChange > 0 ? <FaCaretUp /> : <FaCaretDown />}</p>
                             </div>
                             <div className="text" data-type={ticker.dailyChangePercentage > 0 ? 'gain' : 'loss'}>
-                                <h3>Daily change</h3>
+                                <h3>Daily change (%)</h3>
                                 <p>{NumberHelpers.format(ticker.dailyChangePercentage, true, 3)}%</p>
                             </div>
                         </div>
