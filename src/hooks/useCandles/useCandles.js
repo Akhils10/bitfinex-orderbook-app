@@ -58,7 +58,7 @@ const useCandles = (symbol) => {
             sendJsonMessage({
                 event: 'unsubscribe',
                 channel: 'candles',
-                key: `trade:${timeframe ? timeframe : '1m'}:${symbol}`
+                key: `trade:${timeframe ? timeframe : '30m'}:${symbol}`
             })
             getWebSocket()?.close()
         }

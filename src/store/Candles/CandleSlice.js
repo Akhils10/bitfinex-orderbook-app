@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     candles: [],
     channel: 0,
-    timeframe: '1m'
+    timeframe: '30m'
 }
 
 export const candleSlice = createSlice({
