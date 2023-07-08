@@ -52,6 +52,8 @@ const CandleChart = ({
                     borderVisible: false,
                 },
                 timeScale: {
+                    rightOffset: 2,
+                    barSpacing: 20,
                     borderVisible: false,
                     secondsVisible: true,
                     tickMarkFormatter: (unixTime) => {
@@ -106,7 +108,21 @@ const CandleChart = ({
                 wickUpColor: 'rgba(92, 143, 38, 1)',
             })
 
+            const volumeSeries = chartCreated.addHistogramSeries({
+                color: 'rgba(0, 150, 136, 0.4)',
+                lineWidth: 2,
+                priceFormat: {
+                    type: 'volume',
+                },
+                overlay: true,
+                scaleMargins: {
+                    top: 0.8,
+                    bottom: 0,
+                },
+            })
+
             series.setData(data)
+            volumeSeries.setData(data.map((item) => ({ time: item.time, value: item.volume })))
 
             const toolTipWidth = 80
             const toolTipHeight = 80
@@ -149,6 +165,7 @@ const CandleChart = ({
                         })}AM (UTC)`
                         toolTip.style.display = 'block'
                         const price = param.seriesPrices.get(series)
+                        const volume = param.seriesPrices.get(volumeSeries)
                         toolTip.innerHTML = `<div style="color: ${'#69AEF4'}">
 						<p style="font-size: 10px; margin: 0; color: ${'#69AEF4'}">
 						${time}
@@ -170,6 +187,13 @@ const CandleChart = ({
 						<span style="font-size: 10px; font-weight: 700; margin: 0 2rem 0 0; color: ${'#C1C0BE'}">Close:</span>
 						${price && price.close ? price.close : null}
 						</p>
+                        ${
+                            volume ? `<p style="font-size: 10px; margin: 0; color: ${'#EBEBEA'}">
+                            <span style="font-size: 10px; font-weight: 700; margin: 0 2rem 0 0; color: ${'#C1C0BE'}">Volume:</span>
+                            ${volume}
+                            </p>` : ''
+                        }
+                        
 				</div>`
                         const coordinate = series.priceToCoordinate(price)
                         let shiftedCoordinate = param.point.x - 50
