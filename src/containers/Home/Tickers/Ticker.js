@@ -4,7 +4,7 @@ export default function Ticker({ ticker, clickHandler }) {
     return (
         <div className="tickers_table">
             <div className="cell">
-                <div className="text">
+                <div className="text" onClick={clickHandler} style={{ cursor: 'pointer' }}>
                     <p>{ticker.symbol.replace('t', '').replace('f', '')}</p>
                 </div>
             </div>

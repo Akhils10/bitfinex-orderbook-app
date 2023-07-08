@@ -1,7 +1,8 @@
 import { Loader } from '@ComposedComponents'
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
 import './PriceCard.css'
-import { NumberHelpers } from '@Utils'
+import { Currency, NumberHelpers } from '@Utils'
+
 
 export default function PriceCard({ ticker }) {
     return (
@@ -20,7 +21,7 @@ export default function PriceCard({ ticker }) {
                             </div>
                             <div className="text">
                                 <h3>Price</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 3)}</p>
+                                <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 3)} {Currency.getCurrencyFromSymbol(ticker.symbol)}</p>
                             </div>
                             <div className="text">
                                 <h3>Volume</h3>
