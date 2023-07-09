@@ -23,3 +23,13 @@
 2023-07-09 10:09:25 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 715.469 ms - 3[0m
 2023-07-09 10:19:12 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 718.805 ms - 3[0m
 2023-07-09 10:26:12 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 1276.106 ms - 3[0m
+2023-07-09 10:32:27 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 761.265 ms - -[0m
+2023-07-09 10:32:34 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [36m304[0m 1455.740 ms - -[0m
+2023-07-09 10:32:34 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 1455.087 ms - 3[0m
+2023-07-09 10:32:46 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 788.381 ms - -[0m
+2023-07-09 10:33:34 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 924.769 ms - -[0m
+2023-07-09 10:37:19 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 1398.815 ms - -[0m
+2023-07-09 10:40:18 info: [0mGET /bitfinex-api/v2/platform/status [0m-[0m - ms - -[0m
+2023-07-09 10:40:21 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 2365.931 ms - -[0m
+2023-07-09 10:40:32 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 13129.723 ms - 3[0m
+2023-07-09 10:40:39 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 646.914 ms - -[0m

@@ -1,7 +1,12 @@
-.tickers_table .cell:first-child, .tickers_title .cell:first-child {
+.tickers_table .cell:first-child,
+.tickers_title .cell:first-child {
     /* width: 15%; */
     background-color: #0f0e0e;
     position: sticky;
     left: 0;
     z-index: 1;
-  }
+}
+
+.table_container .ticker_block {
+    max-height: none;
+}

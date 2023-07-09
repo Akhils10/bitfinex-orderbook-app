@@ -10,6 +10,7 @@ const HomePage = () => {
   const { tickers } = useTickers()
   const [currentIndex, setCurrentIndex] = useState(20)
   const [data, setData] = useState([])
+  const [loadMore, setLoadMore] = useState(false)
 
   useEffect(() => {
     if (mounted.current) return
@@ -27,6 +28,7 @@ const HomePage = () => {
       const newData = [...data, ..._data]
       setData([...newData])
     }
+    setLoadMore(tickers.length === data.length)
   }
 
   return (
@@ -34,9 +36,9 @@ const HomePage = () => {
       <InfiniteScroll
         dataLength={data.length}
         next={getMoreData}
-        hasMore={true}
+        hasMore={!loadMore}
         loader={<Loader />}
-        endMessage={<h4>Nothing more to show</h4>}
+        endMessage={<h4 style={{textAlign: 'center'}}>Nothing more to show...</h4>}
       >
         <Tickers dataSource={data} />
       </InfiniteScroll>

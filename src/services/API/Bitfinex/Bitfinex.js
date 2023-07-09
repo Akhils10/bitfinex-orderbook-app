@@ -66,40 +66,19 @@ const getTicker = async (symbol) => {
 
 const getTickers = async () => {
   const result = await request(ENDPOINTS.GET_TICKERS)
-  return result.map((ticker) => {
-    if (ticker.length === 11) {
-      return {
-        symbol: ticker[0],
-        bid: ticker[1],
-        bidSize: ticker[2],
-        ask: ticker[3],
-        askSize: ticker[4],
-        dailyChange: ticker[5],
-        dailyChangePercentage: ticker[6] * 100,
-        lastPrice: ticker[7],
-        volume: ticker[8],
-        high: ticker[9],
-        low: ticker[10]
-      }
-    } else {
-      return {
-        symbol: ticker[0],
-        frr: ticker[1],
-        bid: ticker[2],
-        bidSize: ticker[3],
-        bidPeriod: ticker[4],
-        ask: ticker[5],
-        askSize: ticker[6],
-        askPeriod: ticker[7],
-        dailyChange: ticker[8],
-        dailyChangePercentage: ticker[9] * 100,
-        lastPrice: ticker[10],
-        volume: ticker[11],
-        high: ticker[12],
-        low: ticker[13]
-      }
-    }
-  })
+  return result.filter((item) => item.length === 11).map((ticker) => ({
+    symbol: ticker[0],
+    bid: ticker[1],
+    bidSize: ticker[2],
+    ask: ticker[3],
+    askSize: ticker[4],
+    dailyChange: ticker[5],
+    dailyChangePercentage: ticker[6] * 100,
+    lastPrice: ticker[7],
+    volume: ticker[8],
+    high: ticker[9],
+    low: ticker[10]
+  }))
 }
 
 const getTrades = (symbol) => request(ENDPOINTS.GET_TRADES.replace('{symbol}', symbol))
