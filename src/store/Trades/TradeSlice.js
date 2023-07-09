@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+export const TradeType = {
+    BUY: 0,
+    SELL: 1
+}
 const initialState = {
     trades: [],
     channel: 0,

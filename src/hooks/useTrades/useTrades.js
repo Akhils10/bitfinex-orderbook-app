@@ -29,7 +29,7 @@ const useTrades = (symbol) => {
                 time: data[1],
                 amount: Math.abs(data[2]),
                 price: data[3],
-                type: data[2] > 0 ? 'buy' : 'sell'
+                type: data[2] > 0 ? TradeStoreHelpers.TradeType.BUY : TradeStoreHelpers.TradeType.SELL
             }))
 
             const tradeData = response[1]
@@ -63,7 +63,7 @@ const useTrades = (symbol) => {
         }
     }, [symbol, dispatch, timeframe, sendJsonMessage, getWebSocket])
 
-    const _trades = useMemo(() =>  trades.slice(0, 20), [trades])
+    const _trades = useMemo(() =>  trades.slice(0, 50), [trades])
     return {
         trades: _trades
     }

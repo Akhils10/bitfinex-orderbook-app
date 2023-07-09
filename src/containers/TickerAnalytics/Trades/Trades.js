@@ -14,7 +14,7 @@ export default function Trades({ symbol }) {
                         <div className="ticker_analytic_table">
                             <h1>Trades</h1>
                             <TitleRow />
-                            <div className="ticker_block">
+                            <div className="ticker_block" style={{ overflowY: 'scroll'}}>
                                 {
                                     trades.map((item, index) => <TradeItem data={item} key={`trade-${item.tradeID}-${index}`} />)
                                 }

@@ -24,7 +24,7 @@ const checkZeros = (num) => {
     const num = String(figure).replace(/,/g, '')
     const { count, whole, numbersLeft } = checkZeros(num)
 
-    const hasManyZeros = count > 5
+    const hasManyZeros = count > 4
     if (hasManyZeros && dots) {
       return `${whole}.0...00${numbersLeft}`
     } else if (hasManyZeros && !dots) {
