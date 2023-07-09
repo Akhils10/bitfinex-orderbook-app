@@ -72,7 +72,7 @@ const useOrderBook = (symbol) => {
         const subscribeMessage = {
             event: 'subscribe',
             channel: 'book',
-            symbol: symbol,
+            symbol,
             prec: 'P0',
             freq: 'F0',
         }
@@ -81,13 +81,13 @@ const useOrderBook = (symbol) => {
             sendJsonMessage({
                 event: 'unsubscribe',
                 channel: 'book',
-                symbol: symbol,
+                symbol,
             })
             getWebSocket()?.close()
         }
     }, [symbol, dispatch, sendJsonMessage, getWebSocket])
 
-    const _asks = Object.keys(asksState).slice(0, 21).reduce((acc, k, i) => {
+    const _asks = Object.keys(asksState).slice(0, 20).reduce((acc, k, i) => {
         const total = Object.keys(asksState).slice(0, i + 1).reduce((t, i) => {
             t = t + Math.abs(asksState[i].amount)
             return t
@@ -106,7 +106,7 @@ const useOrderBook = (symbol) => {
         }
     }, 0)
 
-    const _bids = Object.keys(bidsState).slice(0, 21).reduce((acc, k, i) => {
+    const _bids = Object.keys(bidsState).slice(0, 20).reduce((acc, k, i) => {
         const total = Object.keys(bidsState).slice(0, i + 1).reduce((t, i) => {
             t = t + Math.abs(bidsState[i].amount)
             return t

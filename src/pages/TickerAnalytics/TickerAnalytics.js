@@ -1,7 +1,7 @@
 import { useWsTicker } from '@Hooks'
 import { useParams } from 'react-router-dom'
+import { ChartContainer, OrderBook, PriceCard, Trades } from '@ContainerComponents'
 import './TickerAnalytics.css'
-import { ChartContainer, OrderBook, PriceCard } from '@ContainerComponents'
 
 const TickerAnalyticsPage = () => {
   const { symbol } = useParams()
@@ -14,7 +14,10 @@ const TickerAnalyticsPage = () => {
         <ChartContainer symbol={symbol} />
       </div>
 
-      <OrderBook symbol={symbol} scale={1} />
+      <div className="full_width_row" style={{ marginBottom: '5rem'}}>
+        <OrderBook symbol={symbol} scale={1} />
+        <Trades symbol={symbol} />
+      </div>
     </div>
   )
 }

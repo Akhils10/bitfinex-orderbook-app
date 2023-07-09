@@ -10,12 +10,12 @@ export default function Ticker({ ticker, clickHandler }) {
             </div>
             <div className="cell">
                 <div className="text">
-                    <p>{NumberHelpers.formatCryptoNum(ticker.bid, true, 3)}</p>
+                    <p>{NumberHelpers.formatCryptoNum(ticker.bid, true, 6)}</p>
                 </div>
             </div>
             <div className="cell">
                 <div className="text">
-                    <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 3)}</p>
+                    <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 6)}</p>
                 </div>
             </div>
             <div className="cell">
@@ -25,12 +25,12 @@ export default function Ticker({ ticker, clickHandler }) {
             </div>
             <div className="cell">
                 <div className="text" data-type={ticker.dailyChange > 0 ? 'gain' : 'loss'}>
-                    <p>{NumberHelpers.formatCryptoNum(ticker.dailyChange, true, 3)}</p>
+                    <p>{NumberHelpers.formatCryptoNum(ticker.dailyChange, true, 6)}</p>
                 </div>
             </div>
             <div className="cell">
                 <div className="text" data-type={ticker.dailyChangePercentage > 0 ? 'gain' : 'loss'}>
-                    <p>{NumberHelpers.format(ticker.dailyChangePercentage, true, 3)}%</p>
+                    <p>{NumberHelpers.format(ticker.dailyChangePercentage, true, 6)}%</p>
                 </div>
             </div>
             <div className="cell">

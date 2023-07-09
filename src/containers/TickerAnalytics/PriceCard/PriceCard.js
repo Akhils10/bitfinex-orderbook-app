@@ -17,11 +17,11 @@ export default function PriceCard({ ticker }) {
                             </div>
                             <div className="text">
                                 <h3>Bid</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.bid, true, 3)}</p>
+                                <p>{NumberHelpers.formatCryptoNum(ticker.bid, true, 6)}</p>
                             </div>
                             <div className="text">
                                 <h3>Price</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 3)} {Currency.getCurrencyFromSymbol(ticker.symbol)}</p>
+                                <p>{NumberHelpers.formatCryptoNum(ticker.lastPrice, true, 6)} {Currency.getCurrencyFromSymbol(ticker.symbol)}</p>
                             </div>
                             <div className="text">
                                 <h3>Volume</h3>
@@ -29,19 +29,19 @@ export default function PriceCard({ ticker }) {
                             </div>
                             <div className="text">
                                 <h3>Low</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.low, true, 3)}</p>
+                                <p>{NumberHelpers.formatCryptoNum(ticker.low, true, 6)}</p>
                             </div>
                             <div className="text">
                                 <h3>High</h3>
-                                <p>{NumberHelpers.formatCryptoNum(ticker.high, true, 3)}</p>
+                                <p>{NumberHelpers.formatCryptoNum(ticker.high, true, 6)}</p>
                             </div>
                             <div className="text" data-type={ticker.dailyChange > 0 ? 'gain' : 'loss'}>
                                 <h3>Daily change</h3>
-                                <p>{NumberHelpers.format(ticker.dailyChange, true, 3)} {Currency.getCurrencyFromSymbol(ticker.symbol)} {ticker.dailyChange > 0 ? <FaCaretUp /> : <FaCaretDown />}</p>
+                                <p>{NumberHelpers.format(ticker.dailyChange, true, 6)} {Currency.getCurrencyFromSymbol(ticker.symbol)} {ticker.dailyChange > 0 ? <FaCaretUp /> : <FaCaretDown />}</p>
                             </div>
                             <div className="text" data-type={ticker.dailyChangePercentage > 0 ? 'gain' : 'loss'}>
                                 <h3>Daily change (%)</h3>
-                                <p>{NumberHelpers.format(ticker.dailyChangePercentage, true, 3)}%</p>
+                                <p>{NumberHelpers.format(ticker.dailyChangePercentage, true, 6)}%</p>
                             </div>
                         </div>
                     </div>

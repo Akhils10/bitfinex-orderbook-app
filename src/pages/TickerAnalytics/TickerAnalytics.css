@@ -5,3 +5,9 @@
   justify-content: space-between;
   height: 50rem;
 }
+
+.flex_center_row {
+  display: flex;
+  justify-content: space-between;
+  max-height: 50rem;
+}

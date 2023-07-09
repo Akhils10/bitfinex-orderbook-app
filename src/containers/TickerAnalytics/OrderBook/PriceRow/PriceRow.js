@@ -29,34 +29,34 @@ const PriceRow = ({
           </div>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.amount, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.amount, true, 6)}</p>
             </div>
           </div>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.total, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.total, true, 6)}</p>
             </div>
           </div>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.price, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.price, true, 6)}</p>
             </div>
           </div>
         </> :
         <>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.price, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.price, true, 6)}</p>
             </div>
           </div>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.total, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.total, true, 6)}</p>
             </div>
           </div>
           <div className="cell">
             <div className="text">
-              <p>{NumberHelpers.formatCryptoNum(data.amount, true, 3)}</p>
+              <p>{NumberHelpers.formatCryptoNum(data.amount, true, 6)}</p>
             </div>
           </div>
           <div className="cell">

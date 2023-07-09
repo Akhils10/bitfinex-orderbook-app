@@ -3,10 +3,15 @@ import { formatLargeNum } from './Number/formatLargeNumber'
 import { formatCryptoNum } from './Number/formatNumber'
 import { format } from './Number/formatNumber'
 import { getVolumeInUsd } from './Currency/parseAmount'
+import { getTimeFromDate } from './DateHelpers/getTimeFromeDate'
 
 const Currency = {
   getCurrencyFromSymbol,
   getVolumeInUsd
+}
+
+const DateHelpers = {
+  getTimeFromDate
 }
 
 const NumberHelpers = {
@@ -17,5 +22,6 @@ const NumberHelpers = {
 
 export {
   Currency,
+  DateHelpers,
   NumberHelpers
 }
