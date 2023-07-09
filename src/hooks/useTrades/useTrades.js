@@ -66,7 +66,7 @@ const useTrades = (symbol) => {
         }
     }, [symbol, dispatch, timeframe, sendJsonMessage, getWebSocket])
 
-    const _trades = useMemo(() =>  trades.slice(0, 61), [trades])
+    const _trades = useMemo(() =>  trades.slice(0, 100), [trades])
     return {
         trades: _trades
     }

@@ -2,3 +2,11 @@
     padding: 2rem;
     width: 30%;
 }
+
+.trade_card_container .text[data-type="gain"] p {
+    color: #05653d;
+}
+
+.trade_card_container .text[data-type="loss"] p {
+    color: #cc0000;
+}

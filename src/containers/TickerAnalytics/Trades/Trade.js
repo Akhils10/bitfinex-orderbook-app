@@ -3,21 +3,20 @@ import { DateHelpers, NumberHelpers } from '@Utils'
 import { TradeStoreHelpers } from '@Store'
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
 
-function generateBackgroundImage(type, depth = 100) {
-    if (type === TradeStoreHelpers.TradeType.BUY) return `linear-gradient(to left, #113534 ${depth}%, #171713 0%)`
-    return `linear-gradient(to right, #3d1e28 ${depth}%, #171713 0%)`
+function generateBackgroundColor(type) {
+    if (type === TradeStoreHelpers.TradeType.BUY) return '#113534'
+    return '#3d1e28'
 }
 
 const TradeItem = ({ data }) => {
     return (
         <div className="ticker_analytics_table" style={{
-            backgroundColor: '#171713',
-            backgroundImage: generateBackgroundImage(data.type),
+            backgroundColor: generateBackgroundColor(data.type),
             padding: '0 2rem',
             marginBottom: '0.1rem'
         }}>
             <div className="cell">
-                <div className="text">
+                <div className="text" data-type={data.type === TradeStoreHelpers.TradeType.BUY ? 'gain' : 'loss'}>
                     <p>{data.type === TradeStoreHelpers.TradeType.BUY ? <FaCaretUp /> : <FaCaretDown />}</p>
                 </div>
             </div>
