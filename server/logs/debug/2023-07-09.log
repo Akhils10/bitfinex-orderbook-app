@@ -33,3 +33,4 @@
 2023-07-09 10:40:21 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 2365.931 ms - -[0m
 2023-07-09 10:40:32 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 13129.723 ms - 3[0m
 2023-07-09 10:40:39 info: [0mGET /bitfinex-api/v2/tickers?symbols=ALL [32m200[0m 646.914 ms - -[0m
+2023-07-09 10:47:46 info: [0mGET /bitfinex-api/v2/platform/status [32m200[0m 796.247 ms - 3[0m
