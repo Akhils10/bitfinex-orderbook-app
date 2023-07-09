@@ -3,6 +3,10 @@ const TitleRow = () => {
         <div className="ticker_analytics_title">
             <div className="cell">
                 <div className="text">
+                </div>
+            </div>
+            <div className="cell">
+                <div className="text">
                     <h3>Time</h3>
                 </div>
             </div>

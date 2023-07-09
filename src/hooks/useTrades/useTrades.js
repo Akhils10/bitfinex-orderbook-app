@@ -39,6 +39,9 @@ const useTrades = (symbol) => {
             } else if (Array.isArray(tradeData)) {
                 const formattedTrade = getTradeObject(tradeData)
                 dispatch(updateTrades(formattedTrade))
+            }else if(typeof tradeData === 'string' && Array.isArray(response[2])){
+                const formattedTrade = getTradeObject(response[2])
+                dispatch(updateTrades(formattedTrade))
             }
         }
     }
@@ -63,7 +66,7 @@ const useTrades = (symbol) => {
         }
     }, [symbol, dispatch, timeframe, sendJsonMessage, getWebSocket])
 
-    const _trades = useMemo(() =>  trades.slice(0, 50), [trades])
+    const _trades = useMemo(() =>  trades.slice(0, 61), [trades])
     return {
         trades: _trades
     }

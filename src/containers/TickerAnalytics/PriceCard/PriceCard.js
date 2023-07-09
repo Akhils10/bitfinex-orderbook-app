@@ -1,7 +1,7 @@
 import { Loader } from '@ComposedComponents'
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
-import './PriceCard.css'
 import { Currency, NumberHelpers } from '@Utils'
+import './PriceCard.css'
 
 
 export default function PriceCard({ ticker }) {

@@ -4,6 +4,7 @@ import { formatCryptoNum } from './Number/formatNumber'
 import { format } from './Number/formatNumber'
 import { getVolumeInUsd } from './Currency/parseAmount'
 import { getTimeFromDate } from './DateHelpers/getTimeFromeDate'
+import { formatDateAndTime } from './DateHelpers/formatDateAndTime'
 
 const Currency = {
   getCurrencyFromSymbol,
@@ -11,7 +12,8 @@ const Currency = {
 }
 
 const DateHelpers = {
-  getTimeFromDate
+  getTimeFromDate,
+  formatDateAndTime
 }
 
 const NumberHelpers = {

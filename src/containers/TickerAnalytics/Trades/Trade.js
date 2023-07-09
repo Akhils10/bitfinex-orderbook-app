@@ -13,11 +13,17 @@ const TradeItem = ({ data }) => {
         <div className="ticker_analytics_table" style={{
             backgroundColor: '#171713',
             backgroundImage: generateBackgroundImage(data.type),
-            padding: '0 2rem'
+            padding: '0 2rem',
+            marginBottom: '0.1rem'
         }}>
             <div className="cell">
                 <div className="text">
-                    <p>{data.type === TradeStoreHelpers.TradeType.BUY ? <FaCaretUp /> : <FaCaretDown />} {DateHelpers.getTimeFromDate(data.time)}</p>
+                    <p>{data.type === TradeStoreHelpers.TradeType.BUY ? <FaCaretUp /> : <FaCaretDown />}</p>
+                </div>
+            </div>
+            <div className="cell">
+                <div className="text">
+                    <p>{DateHelpers.getTimeFromDate(data.time)}</p>
                 </div>
             </div>
             <div className="cell">

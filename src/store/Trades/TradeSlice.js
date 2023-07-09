@@ -22,7 +22,7 @@ export const tradeSlice = createSlice({
             if(index !== -1){
                 state.trades[index] = payload
             }else{
-                state.trades = [...state.trades, payload]
+                state.trades = [payload, ...state.trades]
             }
         },
         setChannel: (state, { payload }) => {
