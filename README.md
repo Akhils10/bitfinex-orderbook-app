@@ -1,6 +1,6 @@
-# Mintlayer React Test
+# Demo Order Book
 
-[Live app](https://mintlayer-react-test.netlify.app)
+[Live app](https://bitfinex-order-book.netlify.app)
 
 ## Setup
 
